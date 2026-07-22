@@ -1,6 +1,6 @@
 ---
 name: reirradiation-plan-recommend
-description: "Evidence-based re-irradiation plan recommendation for recurrent head and neck cancer — SBRT + immunotherapy regimens, cumulative BED calculation, Quad-Shot validation, and personalized treatment guidance."
+description: "头颈癌再程放疗方案推荐——Quad-Shot/SBRT+IO增敏、累积BED计算。Re-irradiation — Quad-Shot, SBRT+IO, cumulative BED, SER correction."
 version: 1.0.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: MIT
