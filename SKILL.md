@@ -1,7 +1,7 @@
 ---
 name: reirradiation-plan-recommend
 description: "头颈癌再程放疗方案推荐——Quad-Shot/SBRT+IO增敏、累积BED计算。Re-irradiation — Quad-Shot, SBRT+IO, cumulative BED, SER correction."
-version: 1.0.0
+version: 1.1.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: MIT
 ---
@@ -159,7 +159,52 @@ license: MIT
 
 ---
 
-## 五、相关文档
+## 五、SBRT 后常规分割补量（SBRT Boost Consolidation）
+
+> **适用场景**：SBRT 首程照射后（如 5.5 Gy×5fx 或 6-8 Gy×3fx），因各种原因（毒副作用/经济/依从性）中断全身治疗，需用常规分割 RT 补足根治剂量。最常见于 ACC、肉瘤等相对放射抗拒的肿瘤。
+
+### 5.1 BED 计算
+
+```
+累积 EQD2₁₀ = EQD2₁₀(SBRT) + EQD2₁₀(常规补量)
+EQD2₁₀(SBRT) = 总剂量 × (1 + d/10) / 1.2
+EQD2₁₀(常规补量) = 2 Gy × fx 数（如用 2 Gy/fx）
+```
+
+### 5.2 常见 SBRT 方案 → 常规补量速查表
+
+| 首程 SBRT | EQD2₁₀ 已有 | 补量至 60 Gy（ACC/鳞癌） | 补量至 50 Gy（淋巴瘤/良性疾病） |
+|-----------|:--:|------|------|
+| 5.5 Gy × 5 = 27.5 Gy | 35.5 Gy | 24-26 Gy / 12-13 fx | 14-16 Gy / 7-8 fx |
+| 6 Gy × 5 = 30 Gy | 40.0 Gy | 20 Gy / 10 fx | 10 Gy / 5 fx |
+| 8 Gy × 3 = 24 Gy | 36.0 Gy | 24 Gy / 12 fx | 14 Gy / 7 fx |
+
+### 5.3 间隔时间修正
+
+| 间隔 | 正常组织修复 | 补量调整 |
+|------|:--:|------|
+| <4 周 | 几乎无修复 | 按累积 BED 严格限量 |
+| 4-12 周 | 部分修复（黏膜 60-80%，神经 <30%）| 黏膜限量可放宽 10%，神经/脑干不放松 |
+| >12 周 | 显著修复 | 可接近常规限量，但仍需重算累积 BED |
+
+### 5.4 ADC/靶向增敏的残留效应
+
+抗 EGFR ADC 的 SER 约 1.1-1.3——停药后衰减半衰期约 3-4 周。停药 4 个月后增敏效应可忽略不计，但仍需考虑 ADC 引起的正常组织敏感性（如已出现 3 级神经毒性→补量 RT 时需额外警惕神经相关 OAR）。
+
+### 5.5 病例示例——鼻咽 ACC 的 SBRT+补量
+
+```
+首程：5.5 Gy × 5 fx + 抗 EGFR ADC × 4 周期
+间隔：4 个月
+补量方案：24 Gy / 12 fx（常规分割）
+累积 EQD2₁₀：35.5 + 24 = 59.5 Gy → 达到 ACC 根治门槛
+靶区：GTV（残留）+ 鼻咽顶略过中线 + 同侧壁
+不照：颈部（无 LN+、非实体型）、颅底孔道（无 PNI）
+```
+
+---
+
+## 六、相关文档
 
 | 文档 | 内容 |
 |------|------|
