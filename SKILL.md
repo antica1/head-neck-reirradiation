@@ -1,12 +1,14 @@
 ---
-name: head-neck-reirradiation
+name: reirradiation-plan-recommend
 description: "头颈癌再程放疗方案推荐——Quad-Shot/SBRT+IO增敏、累积BED计算。Re-irradiation — Quad-Shot, SBRT+IO, cumulative BED, SER correction."
 version: 1.1.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: MIT
 metadata:
   hermes:
+    tags: [head-neck, radiotherapy, reirradiation, sbrt, immunotherapy]
     triggers_on: [再程放疗, 再照射, 二次放疗, Quad-Shot, SBRT再程, 复发放疗, 累积BED, IO增敏, reirradiation, re-irradiation, retreatment, Quad Shot, BED calculation, 再程方案]
+    related_skills: [head-neck-dvh-plan-review, shared-knowledge]
 ---
 
 # 头颈肿瘤再程放疗方案推荐
@@ -256,3 +258,4 @@ CTV___：______（___ Gy — 理由：______）
 ═══════════════════════════════
 
 注：四类加量指征：①R1/R2切缘 ②ENE+淋巴结 ③手术不易切净区(茎乳孔/腮腺深叶/颅底/翼腭窝/颏结节/前上门牙-鼻底硬腭) ④不手术T4/T4b临近颅底/脑膜/眼眶/颈动脉。病理切缘阴性不等于肿瘤床绝对安全——手术记录中未描述但肿瘤曾临近上述区域时仍需考虑加量。
+```
