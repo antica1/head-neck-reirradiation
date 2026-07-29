@@ -1,5 +1,5 @@
 ---
-name: reirradiation-plan-recommend
+name: head-neck-reirradiation
 description: "头颈癌再程放疗方案推荐——Quad-Shot/SBRT+IO增敏、累积BED计算。Re-irradiation — Quad-Shot, SBRT+IO, cumulative BED, SER correction."
 version: 1.1.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
