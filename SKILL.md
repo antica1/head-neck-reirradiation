@@ -4,12 +4,31 @@ description: "头颈癌再程放疗方案推荐——Quad-Shot/SBRT+IO增敏、�
 version: 1.2.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
 license: CC BY-NC-SA 4.0
+metadata:
+  hermes:
+    tags: [head-neck, radiotherapy, reirradiation, sbrt, immunotherapy]
+    triggers_on: [再程放疗, 再照射, 二次放疗, Quad-Shot, SBRT再程, 复发放疗, 累积BED, IO增敏, reirradiation, re-irradiation, retreatment, Quad Shot, BED calculation, 再程方案]
+    related_skills: [head-neck-dvh-plan-review, shared-knowledge]
 ---
 > **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗组原创知识产权。五大原创框架——间室放疗（门+隔壁）、淋巴逆流规则、QUANTEC 四维批判、口底铁律、化免新辅助后 PORT 降级三梯度——均为九院体系的组成部分。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
 
 
 
 # 头颈肿瘤再程放疗方案推荐
+
+## 铁律清单
+
+| # | 铁律 | 触发条件 |
+|---|------|---------|
+| 1 | Quad-Shot（3.7Gy×4 BID Q4w×3程+Pembro） | 前一程≤54 Gy或间隔>3年，复发/不可切除HNC |
+| 2 | 累积BED必算（前一程残余+本程） | 任何再程放疗决策前 |
+| 3 | 间隔<6月不修复 / >2年修复70% | 正常组织修复修正 |
+| 4 | SBRT >6 Gy/fx BED失真 | SBRT方案BED计算时 |
+| 5 | IO增敏 SER 1.1-1.3（安全备份SER=1.0） | 联合IO/ADC时OAR限量收紧 |
+| 6 | 累积晚期EQD2 >60 → 仅常规分割 | 高累积剂量场景 |
+| 7 | Q3w单次+IO用于中等风险 | 累积晚期EQD2 50-60 Gy区间 |
+| 8 | 脊髓Dmax累积 <100 Gy₂ | 任何再程照射 |
+| 9 | 骨侵犯区域优先常规分割 | 下颌骨/颅底骨受侵时 |
 
 ## 基于病史 → 个性化再照射方案
 
@@ -257,3 +276,4 @@ CTV___：______（___ Gy — 理由：______）
 ═══════════════════════════════
 
 注：四类加量指征：①R1/R2切缘 ②ENE+淋巴结 ③手术不易切净区(茎乳孔/腮腺深叶/颅底/翼腭窝/颏结节/前上门牙-鼻底硬腭) ④不手术T4/T4b临近颅底/脑膜/眼眶/颈动脉。病理切缘阴性不等于肿瘤床绝对安全——手术记录中未描述但肿瘤曾临近上述区域时仍需考虑加量。
+```
