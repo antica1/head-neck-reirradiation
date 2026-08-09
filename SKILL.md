@@ -1,18 +1,15 @@
 ---
 name: reirradiation-plan-recommend
 description: "头颈癌再程放疗方案推荐——Quad-Shot/SBRT+IO增敏、累积BED计算。Re-irradiation — Quad-Shot, SBRT+IO, cumulative BED, SER correction."
-version: 1.2.0
+version: 1.1.0
 author: Zhu Guopei / Shanghai Ninth People's Hospital
-license: CC BY-NC-SA 4.0
+license: MIT
 metadata:
   hermes:
     tags: [head-neck, radiotherapy, reirradiation, sbrt, immunotherapy]
     triggers_on: [再程放疗, 再照射, 二次放疗, Quad-Shot, SBRT再程, 复发放疗, 累积BED, IO增敏, reirradiation, re-irradiation, retreatment, Quad Shot, BED calculation, 再程方案]
     related_skills: [head-neck-dvh-plan-review, shared-knowledge]
 ---
-> **原创声明**：本 Skill 所含临床框架为上海交通大学医学院附属第九人民医院口腔颌面头颈肿瘤科放疗组原创知识产权。五大原创框架——间室放疗（门+隔壁）、淋巴逆流规则、QUANTEC 四维批判、口底铁律、化免新辅助后 PORT 降级三梯度——均为九院体系的组成部分。授权采用 CC BY-NC-SA 4.0（署名-非商业-相同方式共享）。引用：朱国培, 上海九院放疗中心. 头颈肿瘤放疗靶区勾画 Skill 系列 [OL]. GitHub: antica1, 2026.
-
-
 
 # 头颈肿瘤再程放疗方案推荐
 
@@ -183,7 +180,7 @@ metadata:
 
 ## 五、SBRT 后常规分割补量（SBRT Boost Consolidation）
 
-> **适用场景**：SBRT 首程照射后（如 5 Gy×5fx 或 6-8 Gy×3fx），因各种原因（毒副作用/经济/依从性）中断全身治疗，需用常规分割 RT 补足根治剂量。最常见于 ACC、肉瘤等相对放射抗拒的肿瘤。
+> **适用场景**：SBRT 首程照射后（如 5.5 Gy×5fx 或 6-8 Gy×3fx），因各种原因（毒副作用/经济/依从性）中断全身治疗，需用常规分割 RT 补足根治剂量。最常见于 ACC、肉瘤等相对放射抗拒的肿瘤。
 
 ### 5.1 BED 计算
 
@@ -223,21 +220,6 @@ EQD2₁₀(常规补量) = 2 Gy × fx 数（如用 2 Gy/fx）
 靶区：GTV（残留）+ 鼻咽顶略过中线 + 同侧壁
 不照：颈部（无 LN+）、颅底孔道（无 PNI）——鼻咽 ACC 不同于 SCC
 ```
-
-### 5.6 骨寡转移 SBRT 剂量（2026-08 飞书经验，窦圣金）
-
-> 转移性 ACC 单发骨寡转移——SBRT 根治性局部处理。BED₁₀ 目标 ≥48-60 Gy。
-
-| 病灶部位 | 推荐方案 | 说明 |
-|---------|---------|------|
-| 四肢/肋骨/骨盆等外周骨 | **30 Gy/3fx**（10 Gy×3） | BED₁₀=60 Gy |
-| 脊柱（椎体/椎旁） | **30 Gy/5fx**（6 Gy×5） | 降低脊髓 Dmax，BED₁₀=48 Gy |
-| 脊柱紧贴脊髓（<3mm） | 27 Gy/3fx 或 24 Gy/2fx | 脊髓 Dmax 目标 ≤14-15 Gy/次 |
-| 颅骨/眼眶等头颈骨 | **30-35 Gy/5fx** | 视神经、晶状体保护优先 |
-
-- 脊髓限量（3fx）：Dmax≤22.5 Gy、<0.35cc≤15.9 Gy；（5fx）：Dmax≤28 Gy、<0.35cc≤22 Gy
-- GTV=MRI T1/T2 融合骨病灶+骨外软组织；CTV=GTV+3-5mm（不越骨皮质）；PTV=+3mm
-- ⚠️ BED₃>130 Gy 时 ORN/椎体压缩风险——倾向 30-35 Gy/5fx 而非更高单次量
 
 ---
 
